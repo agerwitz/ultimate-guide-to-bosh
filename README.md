@@ -1,12 +1,12 @@
 # Ultimate Guide to BOSH
 
-[BOSH](https://bosh.io) is an open source tool for release engineering, deployment, lifecycle management, and monitoring of distributed systems.
+[BOSH](https://bosh.io) is an open source tool for release engineering, deployment, lifecycle management and monitoring of distributed systems.
 
-It's incredible. Huge companies are using. Tiny companies are using it. You too could be using it.
+It's incredible. Huge companies are using it. Tiny companies are using it. You too could be using it.
 
 This is the Ultimate Guide to BOSH.
 
-It will place you in the middle of daily life with BOSH and gradually guide you towards understanding, and then deploying your own systems, and then through to deep understanding. You'll become a raving fan.
+It will place you in the middle of daily life with BOSH and gradually guide you toward understanding, deploying your own systems, and then through to deep understanding. You'll become a raving fan.
 
 # TOC
 
@@ -59,26 +59,26 @@ NOTE: update TOC using `bin/replace-toc`
 
 I recently started writing this. If you're actually reading this guide now, please let me know (I'll actively ask you to review bits as I write them) and please "Watch" this repo. Perhaps I can update it via Github Releases so you can get notifications of new sections or updates. Or better jokes.
 
-## Guide to the guide
+## Guide to the Guide
 
 This Ultimate Guide to BOSH is to be read linearly. Each section will build upon the preceding sections.
 
 This guide will be a single [README.md](README.md) until that just doesn't make sense anymore.
 
-The guide use sample commands and videos to show you real systems instead of expecting that you can deploy systems yourself on day 1.
+The guide uses sample commands and videos to show you real systems instead of expecting that you can deploy systems yourself on day one.
 
 Later in the guide you will deploy your own BOSH and use it to deploy systems. At that point you will install the `bosh` command-line tool, and you will need to decide which target cloud infrastructure you will use.
 
 
 ## Joyful operations
 
-You're a professional. You're resourceful. You're a king maker. You keep your organisation in the business of winning.
+You're a professional. You're resourceful. You're a king maker. You keep your organization in the business of winning.
 
-In past lives you might have been called: developer, sysadmin, or devops.
+In past lives, you might have been called: developer, sysadmin or devops.
 
-You're always on the look out for better tools, better mental models, and better systems.
+You're always on the look out for better tools, better mental models and better systems.
 
-I'm going to show you how I do some day-to-day activities using BOSH. You get to decide if you'd like to level up your superhero status and learn how to do this too. Learning is involved. Effort. New tools. New ecosystem. I definitely think its worth it. Let me know what you decide!
+I'm going to show you how I do some day-to-day activities using BOSH. You get to decide if you'd like to level up your superhero status and learn how to do this too. Learning is involved. Effort. New tools. New ecosystem. I definitely think it's worth it. Let me know what you decide!
 
 Deploy a 5-node cluster of Zookeeper to Amazon AWS:
 
@@ -97,7 +97,7 @@ Sanity check that the zookeeper cluster is working:
 bosh run-errand smoke-tests
 ```
 
-Upgrade to new version of Zookeeper:
+Upgrade to the new version of Zookeeper:
 
 ```
 git pull
@@ -141,48 +141,48 @@ Tear down your Zookeeper cluster:
 bosh delete-deployment
 ```
 
-## Brief history of BOSH
+## Brief History of BOSH
 
-I was fortunate to be invited to the VMWare campus in Palo Alto CA on April 11 2012 for the unveiling of "the Outer Shell" that deploys Cloud Foundry. The Outer Shell was called BOSH. This is an acronym for "BOSH Outer SHell". Engineers know one thing: recursion is funny.
+I was fortunate to be invited to the VMWare campus in Palo Alto, CA, on April 11, 2012 for the unveiling of "the Outer Shell" that deploys Cloud Foundry. The Outer Shell was called BOSH. This is an acronym for "BOSH Outer Shell". Engineers know one thing: recursion is funny.
 
-I invited myself to the VMware campus for two days to meet the developers of BOSH and Cloud Foundry and came away fascinated by the vast scope of problems that the BOSH team was trying to solve. The BOSH team were kind enough to either answer a question or fix BOSH so the question was void.
+I invited myself to the VMware campus for two days to meet the developers of BOSH and Cloud Foundry, and came away fascinated by the vast scope of problems that the BOSH team was trying to solve. The BOSH team was kind enough to either answer a question or fix BOSH so the question was void.
 
-In 2012 I was very publicly excited about BOSH on Twitter ([@drnic](https://twitter.com/drnic)) and I gave presentations at meetups and conferences about BOSH. I also began creating new open source projects to help myself and others to use BOSH and to create new BOSH releases. I also created the first [BOSH Getting Started](https://github.com/cloudfoundry-community-attic/LEGACY-bosh-getting-started) guide.
+In 2012, I was very publicly excited about BOSH on Twitter ([@drnic](https://twitter.com/drnic)) and I gave presentations at meetups and conferences about BOSH. I also began creating new open source projects to help myself and others to use BOSH and to create new BOSH releases. I also created the first [BOSH Getting Started](https://github.com/cloudfoundry-community-attic/LEGACY-bosh-getting-started) guide.
 
 Many of those early presentations and guides were helpful to the many people who've discovered BOSH and are using it to run production systems at huge scales.
 
-In 2013 the BOSH project was taken over by Pivotal engineering and has been gifted to the Cloud Foundry Foundation to secure its long term success as an open source, open community project. Thanks to Pivotal, IBM and other members of the Cloud Foundry Foundation the BOSH project has received huge consistent investment to this day.
+In 2013, the BOSH project was taken over by Pivotal engineering and has been gifted to the Cloud Foundry Foundation to secure its long term success as an open source, open community project. Thanks to Pivotal, IBM and other members of the Cloud Foundry Foundation, the BOSH project has received huge consistent investment to this day.
 
-There are many people in the history of BOSH who have directly made BOSH what it is, actively sponsored its investment, or evangelised it.
+There are many people in the history of BOSH who have directly made BOSH what is, actively sponsored its investment, or evangelised it.
 
-* James Watters, SVP Product at Pivotal, has been the loudest cheerleader of BOSH on the planet
-* Ferran Rodenas, Consultant at Stark & Wayne, has been my BOSH friend since 2012
-* Dmitriy Kalinin, Product Manager for BOSH, has been driving his incredible vision for BOSH
-* Original BOSH team at VMware - Mark Lucovsky, Vadim Spivak, Oleg Shaldybin, Martin Englund - who had the original vision and execution to create the ultimate tool for release engineering, deployment, lifecycle management, and monitoring of distributed systems.
+* James Watters, SVP Product at Pivotal, has been the loudest cheerleader of BOSH on the planet.
+* Ferran Rodenas, Consultant at Stark & Wayne, has been my BOSH friend since 2012.
+* Dmitriy Kalinin, Product Manager for BOSH, has been driving his incredible vision for BOSH.
+* The original BOSH team at VMware - Mark Lucovsky, Vadim Spivak, Oleg Shaldybin and Martin Englund - who have had the original vision and execution to create the ultimate tool for release engineering, deployment, lifecycle management and monitoring of distributed systems.
 
-## BOSH in production
+## BOSH in Production
 
 BOSH is the core technology to Pivotal Ops Manager and its Pivotal Network delivery system for complex on-premise software systems. BOSH is the deployment technology used behind the scenes for [Pivotal Web Services](https://run.pivotal.io) which runs upon Amazon AWS.
 
 BOSH is the deployment technology used behind the scenes by [IBM BlueMix](https://www.ibm.com/cloud-computing/bluemix/) on its Soft Layer infrastructure.
 
-BOSH is the deployment technology used by GE [Predix](https://www.predix.io/) which runs on various clouds and data centres.
+BOSH is the deployment technology used by GE [Predix](https://www.predix.io/), which runs on various clouds and data centres.
 
-BOSH is the deployment technology used by Swisscom [appCloud](https://developer.swisscom.com/) which runs inside Swisscom data centres.
+BOSH is the deployment technology used by Swisscom [appCloud](https://developer.swisscom.com/), which runs inside Swisscom data centres.
 
 These are huge companies who have small teams running huge production systems using BOSH.
 
 On the smaller end - our consultancy [Stark & Wayne](https://www.starkandwayne.com)  - uses BOSH to run a variety of our internal systems across vSphere, Amazon AWS and Google Compute. (The rest of our systems run upon Cloud Foundry itself, such as https://www.starkandwayne.com and https://www.starkandwayne.com/blog).
 
-## Why write the Ultimate Guide to BOSH?
+## Why Write the Ultimate Guide to BOSH?
 
 BOSH has been my not-so-secret weapon since 2012. Yet you might not yet be using BOSH.
 
 I don't want to write a book.
 
-I wrote a PhD thesis in 2001 and 6 people read it (two supervisors, three judges, and myself). Fortunately this is enough people to be awarded a doctorate. Unfortunately it doesn't really qualify as "sharing knowledge".
+I wrote a PhD thesis in 2001 and 6 people read it (two supervisors, three judges and myself). Fortunately, this is enough people to be awarded a doctorate. Unfortunately, it doesn't really qualify as "sharing knowledge".
 
-I wrote my first blog post in 2006 and when I quickly reached 7 subscribers I knew I'd found my preferred medium for sharing.
+I wrote my first blog post in 2006 and when I quickly reached 7 subscribers. I knew I'd found my preferred medium for sharing.
 
 I enjoy the continuous publication and feedback loop of blogging, and of sharing open source projects. I enjoy a relaxed writing style.
 
@@ -192,15 +192,15 @@ I want to share all the wonders of BOSH with you. I want you to use BOSH. I want
 
 I also want you to switch to Queen's English, learn more about Australia, and to use the Oxford comma.
 
-## Additional sources of information
+## Additional Sources of Information
 
-In addition to this Ultimate Guide to BOSH, there are some other sources of factual knowledge and tutorials.
+In addition to this "Ultimate Guide to BOSH", there are some other sources of factual knowledge and tutorials.
 
 [BOSH documentation website](https://bosh.io/docs/) is very thorough and new features of BOSH now regularly appear simultaneously in this documentation site.
 
-Duncan Winn's [Cloud Foundry: The Definitive Guide](http://shop.oreilly.com/product/0636920042501.do) he includes an entire chapter "BOSH All the Things" towards helping you deploy and operate Cloud Foundry.
+Duncan Winn's [Cloud Foundry: The Definitive Guide](http://shop.oreilly.com/product/0636920042501.do): he includes an entire chapter, "BOSH All the Things," toward helping you deploy and operate Cloud Foundry.
 
-Stark & Wayne's own blog (["bosh" tag](https://www.starkandwayne.com/blog/tag/bosh/)) has over fifty articles, tutorials and tiny tips on BOSH.
+Stark & Wayne's own blog (["bosh" tag](https://www.starkandwayne.com/blog/tag/bosh/)) has over one hundred articles, tutorials and tiny tips on BOSH.
 
 BOSH is an open source project. You can read the source code and learn how it works. A selection of repositories include:
 
@@ -217,29 +217,29 @@ First, let's answer the question:
 
 ![app-stack](images/handdrawn/app-stack.jpg)
 
-Your bespoke or user-facing application is either a compiled application (Golang) or source code that runs within an interpreter (Ruby or Python) or is compiled and requires an interpreter (JVM languages).
+Your bespoke or user-facing application is either a compiled application (Golang), a source code that runs within an interpreter (Ruby or Python), or is compiled and requires an interpreter (JVM languages).
 
 Your bespoke application will be composed of bespoke code plus third party software libraries (RubyGems for Ruby, NPM for Node, Wheels for Python, etc).
 
-Your application will need to be configured (combination of local configuration files, environment variables, service discovery system) to run and connect to any dependent systems.
+Your application will need to be configured (combination of local configuration files, environment variables, service discovery systems) to run and connect to any dependent systems.
 
 Your application will require local dependencies to be already installed - its interpreter, linked libraries, executable applications, etc.
 
-Your application and its dependencies all require an operating system. And formatted disks. And networking to be configured.
+Your application and its dependencies all require an operating system, formatted disks and the networking to be configured.
 
-All this runs in a virtual server/virtual machines (VMs) either in someone else's data centre called "the cloud" (Amazon AWS, Google Compute, Microsoft Azure) or someone else's data centre called "on premise" (but its really normally not in your building, is it?) running virtualisation software (vSphere, OpenStack).
+All this runs in a virtual server/virtual machines (VMs) either in someone else's data centre called "the cloud" (Amazon AWS, Google Compute, Microsoft Azure) or someone else's data centre called "on premise" (but it's normally not in your building, is it?) running virtualisation software (vSphere, OpenStack).
 
 Your applications and databases running on virtual machines will require disks: local or ephemeral disks that might not survive VM downtime or replacement; and persistent networked disks that are independent of each VM and will be available again if you need (or are forced) to replace your VMs.
 
 All of this runs upon physical machines connected to actual storage systems and interconnected by real-world networking.
 
-Servers need to be powered, so you'll need stable affordable electricity. Servers get hot, so you'll need cooling. Servers can be stolen or physically hacked, so you'll need security guards with appropriate lapel badges.
+Servers need to be powered, so you'll need stable, affordable electricity. Servers get hot, so you'll need cooling. Servers can be stolen or physically hacked, so you'll need security guards with appropriate lapel badges.
 
 It's incredible that it all works. Click on https://google.com to check that it all works.
 
-Note: The Ultimate Guide to BOSH will include unsolicited sarcasm and humour. With luck, you'll enjoy both the Ultimate Guide BOSH and the humour.
+Note: "The Ultimate Guide to BOSH" will include unsolicited sarcasm and humour. With luck, you'll enjoy both the "Ultimate Guide BOSH" and the humour.
 
-## Choose your own deployment level
+## Choose Your Own Deployment Level
 
 You might define "deploying my system" at a different level to other people:
 
@@ -249,18 +249,18 @@ You might define "deploying my system" at a different level to other people:
 * using bare metal machines provided by someone else
 * racking bare metal servers or putting Raspberry Pis into the field
 
-From the perspective of your organisation and their goals of efficiently using your time and energy,
-hopefully you can start as high up this stack as possible. For example, there is simply nothing faster, more time efficient, and UI consistent as `cf push`-ing an application to any Cloud Foundry. Every system you deploy should have to first justify why it cannot be deployed to Cloud Foundry or Heroku or Google App Engine.
+From the perspective of your organization and their goals of efficiently using your time and energy,
+hopefully you can start as high up in this stack as possible. For example, there is simply nothing faster, more time efficient, and UI consistent as `cf push`-ing an application to any Cloud Foundry. Every system you deploy should have to first justify why it cannot be deployed to Cloud Foundry, Heroku or Google App Engine.
 
-If you do need to "go down the stack" and take responsibility for more then you will need more help. Either your organisation will need to expect less from you and your team, or you'll need more tooling, automation, and education.
+If you do need to "go down the stack" and take responsibility for more then you will need more help; either your organization will need to expect less from you and your team, or you'll need more tooling, automation and education.
 
 ## Assumptions
 
-The Ultimate Guide to BOSH assumes you need the latter: you need tooling, automation and education.
+"The Ultimate Guide to BOSH" assumes you need the latter: you need tooling, automation and education.
 
-It also assumes that you have direct access to your virtualisation/cloud infrastructure - you have suitable AWS credentials, or a Google Compute account or vSphere admin access.
+It also assumes that you have direct access to your virtualisation/cloud infrastructure - you have suitable AWS credentials, a Google Compute account or vSphere admin access.
 
-The Ultimate Guide to BOSH assumes you are prepared to learn a new tool, its features, and its quirks.
+"The Ultimate Guide to BOSH" assumes you are prepared to learn a new tool, its features, and its quirks.
 
 ## Continuous Integration and Continuous Delivery
 
@@ -302,9 +302,9 @@ Once the instances are provisioned and the disks are attached, BOSH then starts 
 * BOSH will construct configuration files for the packages and commence running the software (called "job templates")
 * BOSH provides service discovery information to each job template about the location and credentials of other instances (called "links")
 
-At this point, it becomes the installed software's responsibility to do thing that it needs to do. It now has been given a brand new instance running on a hardened base operating system, with a mounted persistent disk for it to store data, and has been configured with the information for forming a cluster with its peers, and connecting as a client to any other systems.
+At this point, it becomes the installed software's responsibility to do things that it needs to. It now has been given a brand new instance running on a hardened base operating system, with a mounted persistent disk for it to store data, and has been configured with the information for forming a cluster with its peers, and connecting as a client to any other systems.
 
-## New deployments of Zookeeper
+## New Deployments of Zookeeper
 
 Let's revisit each of these actions for the specific case of our 5-instance deployment of Zookeeper running on Amazon AWS.
 
@@ -325,25 +325,25 @@ BOSH then begins preparing them for their role of "Zookeeper" instance.
 
 * BOSH downloads special BOSH packages of Apache Zookeeper, plus the Java JDK which is a dependency for running Zookeeper.
 * BOSH downloads special BOSH job templates that describe how to configure and run a single node of Zookeeper on each instance
-* BOSH provides each Zookeeper job template with the IP address, client port, quorum port and leader election port for every other member of the deployment (these are Zookeeper specific requirements to for a cluster of Zookeeper instances)
+* BOSH provides each Zookeeper job template with the IP address, client port, quorum port and leader election port for every other member of the deployment (these are Zookeeper specific requirements to for a cluster of Zookeeper instances).
 
 ## BOSH Architecture, Part 1
 
-In the previous sections I've made reference to a `bosh` CLI but have otherwise danced around the topic of "what is BOSH really?"
+In the previous sections, I've made reference to a `bosh` CLI but have otherwise danced around the topic of "What is BOSH really?"
 
-From now onwards I will stop simplistically saying "BOSH does a thing" and start to be consistently discerning about which aspect of BOSH is doing something.
+From now on, I will stop simplistically saying "BOSH does a thing" and start to be consistently discerning about which aspect of BOSH is doing something.
 
-Right now think of BOSH as three things:
+Right now, think of BOSH as three things:
 
 * BOSH CLI - the `bosh` command being referenced in the earlier examples. The CLI is a client to the:
 * BOSH director - an HTTP API that receives requests from the CLI and either communicates directly with instances or with your cloud infrastructure. Communication with your cloud infrastructure is via a:
 * Cloud Provider Interface (CPI) - the specific implementation of how a BOSH director communicates with Amazon AWS, Google Compute, vSphere, OpenStack or any other target.
 
-## CPI - the ultimate Cloud Provider Interface abstraction
+## CPI - The Ultimate Cloud Provider Interface Abstraction
 
 The CLI, the director and a CPI are the basic components that bring a deployment to life on your target cloud infrastructure.
 
-For our Zookeeper example, we began with:
+For our Zookeeper example, we begin with:
 
 ```
 > bosh deploy manifests/zookeeper.yml
@@ -355,13 +355,13 @@ The BOSH CLI forwards this file on to the BOSH director.
 
 The BOSH director decides that it is a new deployment (it has a name that the BOSH director does not know yet). The BOSH director decides it needs to provision five new virtual machines and five persistent disks (we will investigate the contents of `zookeeper.yml` soon). The BOSH director delegates this activity to the BOSH CPI for Amazon AWS (where we are attempting to deploy Zookeeper in our example).
 
-The BOSH CPI is a local command line application hosted inside the BOSH director. You will never need to touch it or find it or run it manually. But it can be helpful to understand its nature. A CPI - the abstraction for how an BOSH director can interact with any cloud infrastructure - is just a CLI. The BOSH director - a long-running HTTP API process - calls out to the CPI executable and invokes commands using a JSON payload. When the CPI completes its task - creating a VM, creating a disk, etc - it will return JSON with success/failure information.
+The BOSH CPI is a local command line application hosted inside the BOSH director. You will never need to touch it, find it or run it manually. But it can be helpful to understand its nature. A CPI - the abstraction for how a BOSH director can interact with any cloud infrastructure - is just a CLI. The BOSH director - a long-running HTTP API process - calls out to the CPI executable and invokes commands using a JSON payload. When the CPI completes its task - creating a VM, creating a disk, etc - it will return JSON with success/failure information.
 
-For Zookeeper running on Amazon AWS, our BOSH director will be running with the AWS CPI CLI (TLA BINGO - three three letter acronyms in a row) installed on the same server. The combination of the BOSH director and a collocated CPI CLI is the magic of how a BOSH director can be configured to communicate with any cloud infrastructure.  The CPI CLIs can be written in different programming languages than BOSH director, and be maintained by different engineering teams at different companies. It is a wonderfully powerful design pattern.
+For Zookeeper running on Amazon AWS, our BOSH director will be running with the AWS CPI CLI (TLA BINGO - three, three letter acronyms in a row) installed on the same server. The combination of the BOSH director and a collocated CPI CLI is the magic of how a BOSH director can be configured to communicate with any cloud infrastructure. The CPI CLIs can be written in different programming languages than BOSH director, and be maintained by different engineering teams at different companies. It is a wonderfully powerful design pattern.
 
 This will be the last we will reference the CPIs for a long time. They exist. They allow a BOSH director to interact with any cloud infrastructure. There are many of them already implemented (Amazon AWS, Google Compute Platform, Microsoft Azure, VMWare vSphere, OpenStack, IBM SoftLayer, VirtualBox, Warden/Garden, Docker).
 
-And you will mostly never need to know about them.
+And you will most likely never need to know about them.
 
 Here is the command for deploying five Amazon EC2 servers running Zookeeper, backed by Amazon EBS volumes, running inside Amazon VPC networking:
 
@@ -383,15 +383,15 @@ In the Google Compute Platform console, your list of VM instances (including a N
 
 ![zookeeper-deployment-google](images/zookeeper-deployment-google.png)
 
-Never used VMWare vSphere before? Here is the command for deploying a five ESXi virtual machines using a concept of persistent disks, on any cluster of physical servers in the world. And they will be Zookeeper:
+Never used VMWare vSphere before? Here is the command for deploying a five ESXi virtual machines using a concept of persistent disks on any cluster of physical servers in the world. And they will be Zookeeper:
 
 ```
 > bosh deploy manifests/zookeeper.yml
 ```
 
-In VMWare vCenter your deployment will not specifically look like anything. vSphere is a crazy mess to me.
+In VMWare vCenter, your deployment will not specifically look like anything. vSphere is a crazy mess to me.
 
-For sure there are distinctions in deploying any system to any infrastructure that need to be made, but the command above is valid and will work once we have a running BOSH director configured with a CPI. That's fantastic.
+There are distinctions in deploying any system to any infrastructure that need to be made, but the command above is valid and will work once we have a running BOSH director configured with a CPI. That's fantastic.
 
 # Instances
 
@@ -424,9 +424,9 @@ This is my 5-node cluster of Zookeper, running on one cloud infrastructure or an
 
 We can see that all the `zookeeper` instances are `running`. There is a 6th instance `smoke-tests` which does not have a Process State. It is an errand instance which has no VM running for it at the time the instances were listed.
 
-For now we will focus on the long-running instances, and return to errands later.
+For now, we will focus on the long-running instances and return to errands later.
 
-Each instance has at least one assigned IP address. The `zookeeper.yml` manifest did not need to allocate these IP addresses, rather if left this assignment to the BOSH director, the CPI, and the cloud infrastructure. It is possible to statically assign IP addresses in a deployment manifest, but ideally there are few reasons to do so. It is not a fun part of a human's day to keep track of IP allocations.
+Each instance has at least one assigned IP address. The `zookeeper.yml` manifest did not need to allocate these IP addresses, rather it left this assignment to the BOSH director, the CPI and the cloud infrastructure. It is possible to statically assign IP addresses in a deployment manifest, but ideally there are few reasons to do so. It is not a fun part of a human's day to keep track of IP allocations.
 
 With the BOSH CLI we can also start to introspect what is running on each instance with `bosh instances --ps`:
 
@@ -470,13 +470,13 @@ worker/194ac3c7-0a07-4681-ade9-afbf0e47a1a9     -             running         10
 ~                                               garden        running         -
 ```
 
-In this deployment we have 4 different instance groups: `db`, `haproxy`, `web` (there are two instances), and `worker` (I've show one of them above but our deployment of [Concourse](https://concourse.ci/) has many `worker` instances).
+In this deployment we have 4 different instance groups: `db`, `haproxy`, `web` (there are two instances), and `worker` (I've shown one of them above, but our deployment of [Concourse](https://concourse.ci/) has many `worker` instances).
 
-Each `worker` instance is running three processes: `baggageclaim`, `beacon`, and `garden`.
+Each `worker` instance is running three processes: `baggageclaim`, `beacon` and `garden`.
 
-The `haproxy` instance has two IP addresses. The latter `184.98.185.163` is a public IP on the Internet. All the other IPs are private to the vSphere data centre. This `haproxy` instance is an inbound HTTP load balancer and has a statically assigned public IP for the benefit of configuring the external CloudFlare service which sits in front receiving https://ci.starkandwayne.com traffic.
+The `haproxy` instance has two IP addresses. The latter `184.98.185.163`, is a public IP on the Internet. All the other IPs are private to the vSphere data centre. This `haproxy` instance is an inbound HTTP load balancer and has a statically assigned public IP for the benefit of configuring the external CloudFlare service which sits infront of receiving https://ci.starkandwayne.com traffic.
 
-The labels for processes above come directly from inside the running instances. We will now look inside the `worker` instance and match up where this information comes from.
+The labels for the processes above come directly from inside the running instances. We will now look inside the `worker` instance and match up where this information comes from.
 
 ## SSH
 
@@ -486,26 +486,26 @@ To access a shell session on any instance we can use `bosh ssh`:
 > bosh ssh worker/194ac3c7-0a07-4681-ade9-afbf0e47a1a9
 ```
 
-If you don't know the long UUID for an instance, and you just want to SSH into any instance in the instance group then use a numbered index such as `/0` or `/1`.
+If you don't know the long UUID for an instance and you just want to SSH into any instance in the instance group, then use a numbered index such as `/0` or `/1`.
 
 ```
 > bosh ssh worker/0
 ```
 
-If your deployment only has a single instance then you can omit the label altogether:
+If your deployment only has a single instance, then you can omit the label altogether:
 
 ```
 > bosh ssh
 ```
 
-If you attempt this latter command but your deployment has more than one instance you will get a red error message similar to:
+If you attempt this latter command but your deployment has more than one instance, you will get a red error message similar to:
 
 ```
 Running SSH:
   Interactive SSH only works for a single host at a time
 ```
 
-After successfully running a `bosh ssh` command you will be presented with a shell prompt like:
+After successfully running a `bosh ssh` command, you will be presented with a shell prompt like:
 
 ```
 worker/194ac3c7-0a07-4681-ade9-afbf0e47a1a9:~$
@@ -520,7 +520,7 @@ $ whoami
 bosh_5510a7b92da9475
 ```
 
-To investigate the processes running we will need to change to the root user:
+To investigate the processes running, we will need to change to the root user:
 
 ```
 worker/194ac3c7-0a07-4681-ade9-afbf0e47a1a9:~$ sudo su -
@@ -529,19 +529,19 @@ worker/194ac3c7-0a07-4681-ade9-afbf0e47a1a9:~#
 
 The suffix of the prompt subtly changed from `$` to `#` to represent we are now a root user.
 
-## Shell user prompts in examples
+## Shell User Prompts in Examples
 
 We now have three different shell users in examples: your local machine, a dynamically created non-root user on an instance, and the root user on an instance.
 
 I would like to help make it obvious at all times from which machine/user a command is being run in the examples within the Ultimate Guide to BOSH.
 
-When an example is being run from a local developer machine (that is, not inside a BOSH instance) I will prefix the commands with the greater-than symbol `>`. For example, `bosh` commands are run from outside of BOSH instances.
+When an example is being run from a local developer machine (that is not inside a BOSH instance) I will prefix the commands with the greater-than symbol `>`. For example, `bosh` commands are run from outside of BOSH instances.
 
 ```
 > bosh deployments
 ```
 
-From inside a BOSH instance I will abbreviate the prompt to `$` in future for non-root user, and `#` for the root user. Like any good person I will try hard to stick to being a non-root user.
+From inside a BOSH instance, I will abbreviate the prompt to `$` in future for non-root user, and `#` for the root user. Like any good person, I will try hard to stick to being a non-root user.
 
 ```
 > bosh ssh
@@ -552,10 +552,10 @@ $ sudo su -
 root
 ```
 
-If an example does not include a shell prompt (`>`, `$`, or `#`) then it is the contents of a shell script, or the output from a command.
+If an example does not include a shell prompt (`>`, `$`, or `#`), then it is the contents of a shell script or the output from a command.
 
 
-**If you `bosh ssh` into a production system and have changed to `root` user then please place a large cowboy hat on your head. A big one. Everyone needs to know you're a cowboy.**
+**If you `bosh ssh` into a production system and have changed to `root` user, then please place a large cowboy hat on your head. A big one. Everyone needs to know you're a cowboy.**
 
 Instead, try changing to the user for the processes you are working on. On most BOSH deployments the convention is to use a user called `vcap`. To change from your random `bosh_xxx` user to `vcap`:
 
@@ -565,9 +565,9 @@ $ whoami
 vcap
 ```
 
-Right now we need to be the `root` user to inspect Monit. Generally you should not need to be `root` user.
+Right now we need to be the `root` user to inspect Monit. Generally, you should not need to be `root` user.
 
-## Monit process monitoring
+## Monit Process Monitoring
 
 ```
 # monit summary
@@ -581,13 +581,13 @@ System 'system_localhost'           running
 
 The three `Process` entries above match directly to the three `Processes` items in the `bosh instances --ps` output in the preceding section. This is where this information comes from.
 
-Inside each VM we delegate to [Monit](https://mmonit.com/monit/) to start, stop, and monitor the health of processes.
+Inside each VM we delegate to [Monit](https://mmonit.com/monit/) to start, stop and monitor the health of processes.
 
-Monit plays a small but vital role within every BOSH deployment running on Linux servers. Monit has been the process monitoring heart of BOSH instances since before BOSH was publicly open sourced in 2012. And ever since 2012, every single Product Manager of BOSH has said "we will replace Monit with something else".
+Monit plays a small but vital role within every BOSH deployment running on Linux servers. Monit has been the process monitoring heart of BOSH instances since before BOSH was publicly open sourced in 2012. And ever since 2012, every single Product Manager of BOSH has said, "We will replace Monit with something else."
 
-If you learn about using BOSH on Windows you will discover that instead of Monit we use native Windows Services to start, stop, repair processes. But for Linux, its Monit.
+If you learn about using BOSH on Windows, you will discover that instead of Monit, we use native Windows Services to start, stop and repair processes. But for Linux, it's Monit.
 
-The good news is that Monit has an [extensive set of configuration](https://mmonit.com/monit/documentation/monit.html#THE-MONIT-CONTROL-FILE) that you might wish to use in future to describe good process behaviour.
+The good news is that Monit has an [extensive set of configuration](https://mmonit.com/monit/documentation/monit.html#THE-MONIT-CONTROL-FILE) that you might wish to use in future to describe good process behavior.
 
 Let's regroup and reestablish what we know:
 
@@ -595,15 +595,15 @@ Let's regroup and reestablish what we know:
 
 In daily life you will run `monit summary` or `bosh instances --ps` as part of debugging.
 
-## Job templates describe processes
+## Job Templates Describe Processes
 
-Earlier in [New deployments](#new-deployments) I introduced the terminology of a "job template":
+Earlier in [New deployments](#new-deployments), I introduced the terminology of a "job template":
 
 > BOSH will construct configuration files for the packages and commence running the software (called "job templates")
 
 Job templates are where we configure Monit processes, which in turn runs processes, which in turn results in a running system (of Zookeeper or Concourse or whatever our deployment is designed for). Job templates also configure the processes, describe how to start a process, and how to stop a process.
 
-First, let's finish tying up the story of Monit processes.
+First, let's finish typing up the story of Monit processes.
 
 Each BOSH instance has a folder `/var/vcap/jobs` containing one or more job templates.
 
@@ -612,9 +612,9 @@ Each BOSH instance has a folder `/var/vcap/jobs` containing one or more job temp
 baggageclaim  garden  groundcrew
 ```
 
-This Concourse `worker` instance is configured to run three job templates called `baggageclaim`, `garden`, and `groundcrew`.
+This Concourse `worker` instance is configured to run three job templates called `baggageclaim`, `garden` and `groundcrew`.
 
-These three job template names `baggageclaim garden groundcrew` are ALMOST the same as the Monit process names from above `baggageclaim garden beacon`. If they ever match, it is for convenience.
+These three job template named `baggageclaim garden groundcrew` are ALMOST the same as the Monit process names from above, `baggageclaim garden beacon`. If they ever match, it is for convenience.
 
 Each job template folder contains a single `monit` file, which in turn contains zero or more `check process <process name>` instructions.
 
@@ -663,17 +663,17 @@ check process beacon
 
 When Monit needs to start `beacon` it will invoke `/var/vcap/jobs/groundcrew/bin/beacon_ctl start`. That is, it invokes `/var/vcap/jobs/groundcrew/bin/beacon_ctl` and passes `start` as the first and only argument.
 
-At this point the Monit `check process beacon` expects that the Linux Process ID (PID) of a running Linux process will be placed at `/var/vcap/sys/run/groundcrew/beacon.pid`. Monit will continuously watch that this Linux process is running. If it isn't - that is, if the process dies unexpectedly - then Monit will restart to process. That is, it will invoke `/var/vcap/jobs/groundcrew/bin/beacon_ctl start` again.
+At this point, the Monit `check process beacon` expects that the Linux Process ID (PID) of a running Linux process will be placed at `/var/vcap/sys/run/groundcrew/beacon.pid`. Monit will continuously watch that this Linux process is running. If it isn't - that is, if the process dies unexpectedly - then Monit will restart to process. That is, it will invoke `/var/vcap/jobs/groundcrew/bin/beacon_ctl start` again.
 
 This is Monit's primary role - to monitor processes (by their PID) and ensure they are restarted if faulty or missing.
 
 When Monit needs to stop `beacon` it will invoke `/var/vcap/jobs/groundcrew/bin/beacon_ctl stop`.
 
-## Job templates
+## Job Templates
 
 The `groundcrew` job template will always be located at `/var/vcap/jobs/groundcrew`. The `garden` job template will always be located at `/var/vcap/jobs/garden`.
 
-As it happens, within our `zookeeper` example deployment each `zookeeper` instance includes a job template called `zookeeper`. This means there will be a `/vcap/vcap/jobs/zookeeper` job template folder. This folder contains a `monit` control script with `create program zookeeper`. Consistency of names - using `zookeeper` as the name of the instance group, job template, and monit process - is convenient once you understand what is going on and is a common pattern that you will see.
+As it happens, within our `zookeeper` example deployment, each `zookeeper` instance includes a job template called `zookeeper`. This means there will be a `/vcap/vcap/jobs/zookeeper` job template folder. This folder contains a `monit` control script with `create program zookeeper`. Consistency of names - using `zookeeper` as the name of the instance group, job template and monit process - is convenient once you understand what is going on and is a common pattern that you will see.
 
 In summary, all job templates - the configuration of how software is configured and executed - are located on every BOSH instance around the world in the same location: `/var/vcap/jobs/`
 
@@ -704,7 +704,7 @@ $ tree
     └── zookeeper
 ```
 
-As discussed above, the `monit` file is the entry point for a job template being used to run Linux processes. The contents of this file tell monit what command to run to start or stop any Linux processes that are required:
+As discussed above, the `monit` file is the entry point for a job template being used to run Linux processes. The contents of this file tell Monit what command to run, to start or stop any Linux processes that are required:
 
 ```
 check process zookeeper
@@ -714,7 +714,7 @@ check process zookeeper
   group vcap
 ```
 
-Within our `/var/vcap/jobs/zookeeper` job template directory the `bin/ctl` script has a `start` command, and Monit expects a PID file to be placed at `/var/vcap/sys/run/zookeeper/pid` (a file location outside of the job template directory that we will revisit soon).
+Within our `/var/vcap/jobs/zookeeper` job template directory, the `bin/ctl` script has a `start` command, and Monit expects a PID file to be placed at `/var/vcap/sys/run/zookeeper/pid` (a file location outside of the job template directory that we will revisit soon).
 
 The abbreviated `bin/ctl` shell script showing the `start` and `stop` subcommands is below (the full original source code is [online](https://github.com/cppforlife/zookeeper-release/blob/master/jobs/zookeeper/templates/ctl.erb))
 
@@ -751,7 +751,7 @@ This `bin/ctl` is a very common implementation of a Monit start/stop wrapper scr
 
 Some software is capable running as a background/daemon process and managing its own PID file. Others do not manage their own PID. Some software can do either and the BOSH job template author will have decided in which mode to run the software.
 
-In the `zookeeper` example above the `bin/ctl start` command it creating the PID file:
+In the `zookeeper` example above, the `bin/ctl start` command it creating the PID file:
 
 ```
 echo $$ > /var/vcap/sys/run/zookeeper/pid
@@ -761,7 +761,7 @@ The expression `$$` is PID of the current shell (the running `bin/ctl` script). 
 
 The `bin/ctl` running script is then uses `exec` to replace the current running shell (the wrapper `bin/ctl` script) with a new command `/var/vcap/packages/zookeeper/bin/zkServer.sh`
 
-If the script only used `echo $$ > pid` and `exec run-software` then the software would be run with escalated root user privileges. Instead the zookeeper application will be run as a restricted `vcap` user and `vcap` group using the `chpst` command.
+If the script only used `echo $$ > pid` and `exec run-software` then the software would be ran with escalated root user privileges. Instead, the Zookeeper application will be ran as a restricted `vcap` user and `vcap` group using the `chpst` command.
 
 Combined together we have a common pattern in many BOSH job templates:
 
@@ -771,7 +771,7 @@ echo $$ > path/to/pidfile
 exec chpst -u user:group run-something-in-foreground
 ```
 
-For the `zookeeper` example, the Zookeeper software was run using a shell script provided by the Apache Zookeeper package (`zkServer.sh`):
+For the `zookeeper` example, the Zookeeper software was ran using a shell script provided by the Apache Zookeeper package (`zkServer.sh`):
 
 ```
 echo $$ > /var/vcap/sys/run/zookeeper/pid
@@ -782,7 +782,7 @@ exec chpst -u vcap:vcap \
 
 An alternate pattern to using `exec chpst -u vcap:vcap run-something` that you might find is the use of `su - vcap -c "run-something"`.
 
-## Running processes, summary-in-progress
+## Running Processes, Summary-in-Progress
 
 We have now covered the most important primary concepts of BOSH: it will provision virtual machines on your target cloud infrastructure, it will install job templates that describe how software is to be started and stopped, and it uses Monit to continuously monitor the health of these processes.
 
@@ -804,7 +804,7 @@ If you want to see all the Linux processes currently running on a BOSH instance,
 $ ps axwwf
 ```
 
-This command will show all running processes in wide screen mode. You will see the full explicit commands that were run to start Linux processes. From a `zookeeper` instance this will include this Java monster command:
+This command will show all running processes in wide screen mode. You will see the full explicit commands that were ran to start Linux processes. From a `zookeeper` instance this will include this Java monster command:
 
 ```
  7913 ?        S<l    0:08 /var/vcap/packages/java/jdk/bin/java -Dzookeeper.log.dir=/var/vcap/sys/log/zookeeper -Dzookeeper.root.logger=INFO,CONSOLE,ROLLINGFILE -cp /var/vcap/packages/zookeeper/bin/../build/classes:/var/vcap/packages/zookeeper/bin/../build/lib/*.jar:/var/vcap/packages/zookeeper/bin/../lib/slf4j-log4j12-1.6.1.jar:/var/vcap/packages/zookeeper/bin/../lib/slf4j-api-1.6.1.jar:/var/vcap/packages/zookeeper/bin/../lib/netty-3.10.5.Final.jar:/var/vcap/packages/zookeeper/bin/../lib/log4j-1.2.16.jar:/var/vcap/packages/zookeeper/bin/../lib/jline-0.9.94.jar:/var/vcap/packages/zookeeper/bin/../zookeeper-3.4.10.jar:/var/vcap/packages/zookeeper/bin/../src/java/lib/*.jar:/var/vcap/jobs/zookeeper/config:/var/vcap/packages/zookeeper/lib/slf4j-log4j12-1.6.1.jar:/var/vcap/packages/zookeeper/lib/slf4j-api-1.6.1.jar:/var/vcap/packages/zookeeper/lib/netty-3.10.5.Final.jar:/var/vcap/packages/zookeeper/lib/log4j-1.2.16.jar:/var/vcap/packages/zookeeper/lib/jline-0.9.94.jar:/var/vcap/packages/zookeeper/dist-maven/zookeeper-3.4.10.jar:/var/vcap/packages/zookeeper/dist-maven/zookeeper-3.4.10-tests.jar:/var/vcap/packages/zookeeper/dist-maven/zookeeper-3.4.10-sources.jar:/var/vcap/packages/zookeeper/dist-maven/zookeeper-3.4.10-javadoc.jar: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.local.only=false org.apache.zookeeper.server.quorum.QuorumPeerMain /var/vcap/jobs/zookeeper/config/zoo.cfg
@@ -814,7 +814,7 @@ This command will show all running processes in wide screen mode. You will see t
 
 ## Logs
 
-The previous sections have shown you what instances and processes are running in a system. In order to learn more about what all the software is doing as it is running you will need to be able to view the logs of all the running processes.
+The previous sections have shown you what instances and processes are running in a system. In order to learn more about what all the software is doing as it is running, you will need to be able to view the logs of all the running processes.
 
 The BOSH CLI is very convenient for getting started with logs. You can stream all the logs from all the job templates from all the instances in a deployment with one beautiful command:
 
@@ -852,7 +852,7 @@ The reason that `bosh logs` can find all the process logs is a convention used a
 
 Note, this log location is different from many other Linux conventions, such as `/var/log`. We will discuss the alternate filesystem layout of BOSH instances soon.
 
-Within a BOSH instance you can try watching all the logs using `tail`:
+Within a BOSH instance, you can try watching all the logs using `tail`:
 
 ```
 $ tail -f /var/vcap/sys/log/{*.log,*/*.log}
@@ -871,11 +871,11 @@ exec chpst -u vcap:vcap \
 
 Any regular output will be appended to a file `/var/vcap/sys/log/zookeeper/stdout.log`, and any error or warning messages will be appended to a file `/var/vcap/sys/log/zookeeper/stderr.log`.
 
-## Linux pipe operators
+## Linux Pipe Operators
 
 The `>>` and `2>>` symbols in the example above are Linux pipe operators. They are similar to the pipe operators `>` and `2>`.
 
-Every Linux process can emit two pipes called "standard out" (stdout) and "standard error" (stderr). Typically applications will print any regular output for the application to stdout and emit errors and warnings to stderr. This means that any text output to either stdout or stderr has some additional metadata - was it regular output or was it an error/warning message.
+Every Linux process can emit two pipes called "standard out" (stdout) and "standard error" (stderr). Typically, applications will print any regular output for the application to stdout and emit errors and warnings to stderr. This means that any text output, to either stdout or stderr, has some additional metadata - was it a regular output or was it an error/warning message.
 
 When we run applications in a terminal or SSH session, anything appearing in these two pipes will be displayed on the screen.
 
@@ -890,31 +890,31 @@ You will now be able to look inside `/var/vcap/sys/log/zookeeper/stderr.log` and
 
 If the pipe operators `>` and `2>` are used, then new log files will be created when the application is executed. This will effectively erase any previous logs that might have explained the history of the process before it was restarted. Therefore you will typically see the append operators `>>` and `2>>`.
 
-## Short-lived infrastructure
+## Short-Lived Infrastructure
 
 We cannot assume that files or data written to the filesystem will be available forever. Cloud infrastructure providers will not make any commitments to the longevity of their virtual machines and the associated root file systems.
 
-The ephemeral lifespan of virtual machines needs to be considered and fortunately BOSH is here to help.
+The ephemeral lifespan of virtual machines needs to be considered, and fortunately BOSH is here to help.
 
 If the BOSH director ever discovers that an instance has disappeared or has become unresponsive, it will fix the problem. The BOSH director will resurrect any missing instances.
 
 **Resurrection of infrastructure is an incredibly powerful feature of BOSH that makes it essential to your organization.** And your personal life.
 
-If the original server is missing (perhaps the cloud provider lost the host machine or perhaps someone with admin permissions accidentally deleted it), the BOSH director create a new server.
+If the original server is missing (perhaps the cloud provider lost the host machine or perhaps someone with admin permissions accidentally deleted it), the BOSH director creates a new server.
 
 Alternately, if the cloud provider API believes the original server still exists but the BOSH director cannot access it, then the BOSH director will request that the server be destroyed and will then create a replacement.
 
-Cloud servers will also be destroyed and recreated during normal BOSH operations, in additional to the abnormal situations above.
+Cloud servers will also be destroyed and recreated during normal BOSH operations, in addition to the abnormal situations above.
 
-Routinely you will want to upgrade all the base operating systems for all the instances of all your deployments to push out security patches. The base operating system is called a BOSH "stemcell". These are maintained by the BOSH Core team and are regularly released with new security fixes (thanks also go to Canonical who maintain the Ubuntu distribution). You might find one or two new stemcells are released each month containing security fixes in the base operating system alone.
+Routinely, you will want to upgrade all the base operating systems for all the instances of all your deployments to push out security patches. The base operating system is called a BOSH "stemcell". These are maintained by the BOSH Core team and are regularly released with new security fixes (thanks also go to Canonical who maintain the Ubuntu distribution). You might find that one or two new stemcells are released each month containing security fixes in the base operating system alone.
 
-Fortunately upgrading all your deployments to new BOSH stemcells is a very easy operation and we will definitely we returning to this topic soon. For now you need to know that this process will result in your application processes being stopped (via Monit), the original servers being deleted (via the CPI) and new servers being created to replace them (via the CPI). Any files written arbitrarily to the filesystem will be lost.
+Fortunately, upgrading all your deployments to new BOSH stemcells is a very easy operation and we will definitely be returning to this topic soon. For now, you need to know that this process will result in your application processes being stopped (via Monit), the original servers being deleted (via the CPI) and new servers being created to replace them (via the CPI). Any files written arbitrarily to the filesystem will be lost.
 
-Another routing operation you will perform that causes instances to be stopped, and the servers deleted and replaced is resizing or scaling up your instances. BOSH CPIs assume that cloud providers do not know how to resizing a running server, so they will emulate "resizing" by deleting the original small server and replacing it with a new larger server. Any files written arbitrarily to the filesystem will be lost.
+Another routing operation you will perform that causes instances to be stopped, and the servers deleted and replaced is resizing or scaling up your instances. BOSH CPIs assume that cloud providers do not know how to resize a running server, so they will emulate "resizing" by deleting the original small server and replacing it with a new larger server. Any files written arbitrarily to the filesystem will be lost.
 
-## Persistent volumes
+## Persistent Volumes
 
-Fortunately there is a solution to storing data that survives longer than any ephemeral cloud server: persistent volumes.
+Fortunately, there is a solution to storing data that survives longer than any ephemeral cloud server: persistent volumes.
 
 Each cloud infrastructure provider has its own implementation of long-lived storage volumes. Amazon AWS has [Elastic Block Storage](https://aws.amazon.com/ebs/) (EBS). Google Compute has [Persistent Disks](https://cloud.google.com/compute/docs/disks/#pdspecs).
 
@@ -951,7 +951,7 @@ You will also learn that you can select different volume types and provide other
 
 ## Filesystem layout
 
-The `df` output of filesystem volumes above begins to indicate why BOSH instances have a non-standard filesystem layout (for example, log files do not go into `/var/log` rather they go into `/var/vcap/sys/log`).
+The `df` output of filesystem volumes above begins to indicate why BOSH instances have a non-standard filesystem layout (for example, log files do not go into `/var/log` rather they go into `/var/vcap/sys/run`).
 
 The root volume (`/`) of the instance above is very small:
 
@@ -959,7 +959,7 @@ The root volume (`/`) of the instance above is very small:
 /dev/sda1       2.8G  1.2G  1.5G  46% /
 ```
 
-It only has 1GB of available capacity. We do not want to install software packages or place fast-growing log files on this disk volume. Computer system behaviour is unpredictable when disks fill up. The bad sort of unpredictable.
+It only has 1GB of available capacity. We do not want to install software packages or place fast-growing log files on this disk volume. Computer system behavior is unpredictable when disks fill up. The bad sort of unpredictable.
 
 In addition to the small root volume, each BOSH instance is allocated an additional larger volume `/var/vcap/data`:
 
@@ -971,7 +971,7 @@ The size of `/var/vcap/data` is configurable and large, where as the `/` root vo
 
 **We want to use `/var/vcap/data` for storing everything that is ephemeral, `/var/vcap/store` for everything that is permanent, and avoid the root volume.**
 
-For example we want to use `/var/vcap/data` to install software packages, job templates, and log files. Except I've previously indicated that the filesystem location for these three was `/var/vcap/packages`, `/var/vcap/jobs`, and `/var/vcap/sys/log`.
+For example, we want to use `/var/vcap/data` to install software packages, job templates and log files. Except I've previously indicated that the filesystem location for these three was `/var/vcap/packages`, `/var/vcap/jobs` and `/var/vcap/sys/log`.
 
 BOSH instances have convenience symlinks so that files are actually stored within the large ephemeral `/var/vcap/data` volume. Some examples:
 
@@ -987,9 +987,9 @@ $ ls -al /var/vcap/sys
 lrwxrwxrwx ... /var/vcap/sys -> /var/vcap/data/sys
 ```
 
-## What is vcap?
+## What is VCAP?
 
-In the time before VMWare first publicly announced Cloud Foundry in April 2011, and before they announced BOSH in April 2012, these collection of projects were known as "VMWare Cloud Application Platform". Or VCAP for short. Which naturally became `vcap` anywhere the engineers aesthetically preferred all-lowercase labels. Thus, the common root folder for everything installed on a machine became `/var/vcap`.
+In the time before VMWare first publicly announced Cloud Foundry in April 2011, and before they announced BOSH in April 2012, these collections of projects were known as "VMWare Cloud Application Platform". Or VCAP for short. Which naturally became `vcap` anywhere the engineers aesthetically preferred all-lowercase labels. Thus, the common root folder for everything installed on a machine became `/var/vcap`.
 
 There have been occasional half-hearted ideas about renaming `/var/vcap` to something else. Anything else. But the convention that every file in a BOSH instance is nested underneath `/var/vcap` is incredibly pervasive today.
 
@@ -1001,7 +1001,7 @@ If you ever want to make a permanent mark in the short-lived, short-attention sp
 
 This is the final stop on our tour of BOSH instances. We arrive at the depot of raw materials of what allows a `zookeeper` BOSH deployment with five BOSH instances to actually behave like a cluster of Apache Zookeeper: the Apache Zookeeper software itself.
 
-If you have been exposed to a variety of different operating systems (Windows, OS X, different Linux distributions) then you will have also been exposed to different packaging systems for the distribution and installation of software. This broad exposure will prepare you for BOSH packaging in one special way: you will be lacking the energy and the will to fight against "OMG, why is there another packaging system?!"
+If you have had a diverse expose to different operating systems (Windows, OS X, different Linux distributions) then you will have also been exposed to different packaging systems for the distribution and installation of software. This broad exposure will prepare you for BOSH packaging in one special way: you will be lacking the energy and the will to fight against "OMG, why is there another packaging system?!"
 
 BOSH packaging is similar to [Homebrew](https://brew.sh/) packaging for MacOS/OS X in that an installed package is a singular folder. An installed Homebrew package will be located at `/usr/local/Cellar/pkgname`. An installed BOSH package will be locatable at `/var/vcap/packages/pkgname` (and actually stored within the `/var/vcap/data` ephemeral volume as discussed in a previous section).
 
@@ -1015,7 +1015,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 
 That's right, there are two folders included in `PATH` for games. I had to look it up - these are not mentioned in the [FHS wikipedia page](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard).
 
-But I personally have a dissatisfaction with the standard Linux filesystem hierarchy: the knowledge of which files belong to each package is obscure. At the time that you need to know "how does this process get started and stopped" or "where are the log files for this process", its normally urgent and you're in a bad mood.
+But I personally have a dissatisfaction with the standard Linux filesystem hierarchy: the knowledge of which files belong to each package is obscure. At the time that you need to know "how does this process get started and stopped" or "where are the log files for this process", it's normally urgent and you're in a bad mood.
 
 This is a big positive for the BOSH filesystem hierarchy: you can find everything in a hurray.
 
@@ -1025,7 +1025,7 @@ You look inside `/var/vcap/jobs/jobname` and find the Monit control script, wrap
 
 You look inside `/var/vcap/sys/log` and find all the logs for the processes that are running now or have run in the past.
 
-One difference between BOSH packaging and every other packaging system (including Homebrew) is that packages are neither first class citizens nor is there any global repositories of shared packages.
+One difference between BOSH packaging, and every other packaging system (including Homebrew), is that packages are neither first class citizens nor is there any global repositories of shared packages.
 
 Packages do not exist in isolation. Neither do job templates. Instead, they are rolled up into a singular first class entity called the BOSH release.
 
@@ -1039,7 +1039,7 @@ Which `zookeeper` package? You might assume that it is Apache Zookeeper, but whi
 
 Which `java` package? Oracle Java or OpenJDK? The JDK or the JRE? Which version?
 
-There is an important assumption built into the very fibre of BOSH that each of these questions is important and the answer potentially critical. Even if the initial person who deployed Zookeeper initially didn't specifically care which version of Apache Zookeeper or which JDK they used; everyone from that day onwards will need to care.
+There is an important assumption built into the very fiber of BOSH that each of these questions is important and the answer potentially critical. Even if the initial person who deployed Zookeeper initially didn't specifically care which version of Apache Zookeeper or which JDK they used; everyone from that day onwards will need to care.
 
 Each version of a BOSH release combines a specific combination of packages and job templates that are written and packaged to work together. Instead of worrying about a matrix of Zookeeper and Java editions and versions that might work together, a BOSH release will explicitly package one of each together as a known good pair.
 
@@ -1047,19 +1047,19 @@ If a security patch is released for Apache Zookeeper, then a new version of the 
 
 If you need to switch from Oracle Java to OpenJDK, then a new version of the entire BOSH release needs to be created, tested and deployed.
 
-For this reason I say that packages and job templates are not first class citizens in BOSH. BOSH releases are the primary unit of deployment into BOSH instances.
+For this reason, I say that packages and job templates are not first class citizens in BOSH. BOSH releases are the primary unit of deployment into BOSH instances.
 
 The method for selecting specific versions of specific BOSH releases to be combined into a BOSH deployment is using the deployment manifest.
 
-# Deployment manifests, Part 1
+## Deployment Manifests, Part 1
 
-To provision a new deployment we provide a deployment manifest to the BOSH director. To make modifications to an existing deployment we provide the BOSH director with a modified deployment manifest.
+To provision a new deployment we provide a deployment manifest to the BOSH director. To make modifications to an existing deployment, we provide the BOSH director with a modified deployment manifest.
 
 A deployment manifest is the explicit declaration of what software needs to run, with specific configuration properties, on each different instance.
 
 **The same deployment manifest deployed today should produce the same running system if you deployed it again in 5 years time.**
 
-Our first example deployment manifest will be `zookeeper.yml`, which I've been referring to throughout the Ultimate Guide to BOSH so far (the [original file](https://github.com/cppforlife/zookeeper-release/blob/207c9d79eb12399dffe6df7f89abd854d4888f3e/manifests/zookeeper.yml) at time of writing). Below is a subset of the manifest that references the concepts covered so far:
+Our first example deployment manifest will be `zookeeper.yml`, which I've been referring to throughout "The Ultimate Guide to BOSH" so far (the [original file](https://github.com/cppforlife/zookeeper-release/blob/207c9d79eb12399dffe6df7f89abd854d4888f3e/manifests/zookeeper.yml) at time of writing). Below is a subset of the manifest that references the concepts covered so far:
 
 ```yaml
 ---
@@ -1096,7 +1096,7 @@ In the example manifest above, the top level sections of this YAML file are:
 * `releases` lists the specific BOSH release versions that are to be used, which almost means the specific sets of job templates and packages.
 * `instance_groups` lists the sets of instances that will run the same job templates/packages as each other. Instance groups will be deployed as long running instances by default. The configuration `lifecycle: errand` means they will instead be errands (to be discussed later).
 
-## Sizing a deployment, Part 1
+## Sizing a Deployment, Part 1
 
 In our example subset manifest above, there are two attributes we can change to resize the infrastructure used for our deployment:
 
@@ -1107,15 +1107,15 @@ For a brand new deployment, setting these attributes and invoking `bosh deploy` 
 
 For an existing deployment, changing these attributes and invoking `bosh deploy` will perform a transformation of your system from its current cloud infrastructure servers and disks to the new requirements - more or fewer servers, and/or smaller or large persistent disks.
 
-We will review how the BOSH director performs these transformations of existing deployments later. Its pretty fabulous.
+We will review how the BOSH director performs these transformations of existing deployments later. It's pretty fabulous.
 
-## Explicit declaration in manifests
+## Explicit Declaration in Manifests
 
-If we keep this manifest the same we will always get the same deployment of instances, job templates, and packages year after year. This is achieved by our explicit declaration of `releases`.
+If we keep this manifest the same we will always get the same deployment of instances, job templates and packages year after year. This is achieved by our explicit declaration of `releases`.
 
 In the example above, we explicit require `zookeeper/0.0.6` BOSH release. The `0.0.6` version number is only relative to preceding versions of the same BOSH release, not to any upstream packages. At the time of writing, the `zookeeper` BOSH release being used was packaging Apache Zookeeper v3.4.10 ([list of source blobs](https://github.com/cppforlife/zookeeper-release/blob/207c9d79eb12399dffe6df7f89abd854d4888f3e/config/blobs.yml)).
 
-If you deployed `zookeeper/0.0.6` every day for a year you would always be deploying Apache Zookeeper v3.4.10 as it is packaged inside the BOSH release. It would always use the same Monit control script, the same Monit start/stop wrapper script, and the same configuration templates.
+If you deployed `zookeeper/0.0.6` every day for a year, you would always be deploying Apache Zookeeper v3.4.10 as it is packaged inside the BOSH release. It would always use the same Monit control script, the same Monit start/stop wrapper script, and the same configuration templates.
 
 In the deployment manifest we decide which instances install which job templates/packages within the `instance_groups` section.
 
@@ -1136,7 +1136,7 @@ This group of instances will be known within the deployment by its name `zookeep
 
 Each instance in the group will have a 10GB persistent disk (the plain number `10240` is in MB).
 
-The software, configuration, and start/stop scripts running on each `zookeeper` instance is described by the `jobs:` section of an instance group.
+The software, configuration and start/stop scripts running on each `zookeeper` instance is described by the `jobs:` section of an instance group.
 
 ```yaml
 jobs:
@@ -1149,7 +1149,7 @@ This `jobs` section declares that it will install a job template called `zookeep
 
 But right now, you might find it confusing.
 
-## Immutable manifest attributes
+## Immutable Manifest Attributes
 
 Let's rename as many attributes in this manifest as we can and discuss which attributes we cannot modify.
 
@@ -1180,27 +1180,27 @@ instance_groups:
 
 Compare this manifest to the earlier version and see that we have modified the following attributes:
 
-* deployment name changed to `zookeeper-deployment`
-* instance group `zookeeper` renamed to `zookeeper-instances`
-* we've reduced the cluster size from 5 instances to 3
-* we've resized the persistent disk from 10GB to 20GB
-* errand `smoke-tests` renamed to `smoke-tests-errand`
+* Deployment name changed to `zookeeper-deployment`
+* Instance group `zookeeper` renamed to `zookeeper-instances`
+* We've reduced the cluster size from five instances to three
+* We've resized the persistent disk from 10GB to 20GB
+* Errand `smoke-tests` renamed to `smoke-tests-errand`
 
 These were the only attributes in our manifest subset that were easily modifiable or renamable.
 
-Conversely the following attributes of the manifest were not easily modifiable:
+Conversely, the following attributes of the manifest were not easily modifiable:
 
-* the `name` of each item in the `releases` section comes from the BOSH release we use; we cannot rename or alias them within the manifest
-* the `verion`, `url`, and `sha1` are related to each other to describe which BOSH release to use; if we want to upgrade to a newer release we would change these
-* within `jobs` sections of instance groups the `release` must match one of the names in the top-level `releases` section. At the top-level these are immutable, so they are correspondingly immutable within the `jobs` sections of instance groups.
-* within `jobs` sections of instance groups, the `name` of a job template is derived from the BOSH release itself (more on this soon), and cannot be renamed or aliased within a deployment manifest.
+* The `name` of each item in the `releases` section comes from the BOSH release we use; we cannot rename or alias them within the manifest
+* The `verion`, `url`, and `sha1` are related to each other to describe which BOSH release to use; if we want to upgrade to a newer release we would change these
+* Within `jobs` sections of instance groups the `release` must match one of the names in the top-level `releases` section. At the top-level these are immutable, so they are correspondingly immutable within the `jobs` sections of instance groups.
+* Within `jobs` sections of instance groups, the `name` of a job template is derived from the BOSH release itself (more on this soon), and cannot be renamed or aliased within a deployment manifest.
 
 
 ## Cloud Config, Part 1
 
-The number of instances and the size of persistent disks are attributes that are not specific to which cloud infrastructure you are using. Conversely, the specific details about the size of the servers is is specific to each cloud infrastructure. On vSphere you will want to specify the explicit allocation of CPUs, RAM and ephemeral disk. Whereas, when using Amazon EC2 you might choose between a list of [Instance Types](https://aws.amazon.com/ec2/instance-types/) such as `m4.large` or `t2.medium`. Similarly, Google Compute [Machine Types](https://cloud.google.com/compute/docs/machine-types) have a list of predefined sizes you can provision, albeit with a different set of names such as `n1-standard-1` and different attributes from Amazon EC2.
+The number of instances and the size of persistent disks are attributes that are not specific to which cloud infrastructure you are using. Conversely, the specific details about the size of the servers is is specific to each cloud infrastructure. On vSphere you will want to specify the explicit allocation of CPUs, RAM and ephemeral disk. Whereas, when using Amazon EC2, you might choose between a list of [Instance Types](https://aws.amazon.com/ec2/instance-types/), such as `m4.large`, or `t2.medium`. Similarly, Google Compute [Machine Types](https://cloud.google.com/compute/docs/machine-types) have a list of predefined sizes you can provision, albeit with a different set of names such as `n1-standard-1`, and different attributes from Amazon EC2.
 
-This crossover from the deployment manifest to specific cloud infrastructure requirements is not placed in the deployment manifest. Instead we will have provided our BOSH director with "Cloud Config" to educate it about how we wish our deployment manifests to be applied to our cloud infrastructure.
+This crossover from the deployment manifest to specific cloud infrastructure requirements is not placed in the deployment manifest. Instead, we will have provided our BOSH director with "Cloud Config" to educate it about how we wish our deployment manifests to be applied to our cloud infrastructure.
 
 Each BOSH director has a Cloud Config specification. We can download and view a BOSH director's Cloud Config:
 
@@ -1208,7 +1208,7 @@ Each BOSH director has a Cloud Config specification. We can download and view a 
 bosh cloud-config
 ```
 
-There are several areas of configuration but for now let's look at one - `vm_type` - the specification of the size of servers. An example of a `bosh cloud-config` for Google Compute might look like:
+There are several areas of configuration, but for now let's look at one - `vm_type` - the specification of the size of servers. An example of a `bosh cloud-config` for Google Compute might look like:
 
 ```yaml
 vm_types:
@@ -1219,7 +1219,7 @@ vm_types:
     root_disk_type: pd-ssd
 ```
 
-For Amazon EC2 it might include:
+For Amazon EC2, it might include:
 
 ```yaml
 vm_types:
@@ -1230,7 +1230,7 @@ vm_types:
       size: 25_000
 ```
 
-For vSphere it might include:
+For vSphere, it might include:
 
 ```yaml
 vm_types:
@@ -1246,38 +1246,3 @@ They are all different because the nature of BOSH deployments is they can target
 As the `cloud-config` is shared across deployments your organization, and the broader BOSH community, will want to agree on a minimal set of `vm_types` that any basic deployment manifest will work with any basic `cloud-config`. In the three examples above, each `vm_types` list includes a `name: default` item. In production your `cloud-config` might include many other `vm_types` that you'd like to use within your deployments, but it is good practice to include at least one called `default`.
 
 Each `vm_type` also has a `cloud_properties` section whose contents is specific to the target cloud infrastructure and the CPI being used within the BOSH director.
-
-It is likely that you will want to use various `vm_types` across all your deployments. You might want small instance sizes for low CPU/low RAM activities, and large CPU/large RAM instances for other activities. Each will need an entry in your shared `vm_types` list within `bosh cloud-config`.
-
-In our example `zookeeper.yml` we can now add a required `vm_type` attribute into each of the `instance_groups` to reference which instance size we want to use from our `cloud-config`:
-
-```yaml
----
-name: zookeeper-deployment
-
-instance_groups:
-- name: zookeeper-instances
-  instances: 5
-  vm_type: default
-  jobs:
-  - name: zookeeper
-    release: zookeeper
-  persistent_disk: 10240
-
-- name: smoke-tests-errand
-  instances: 1
-  lifecycle: errand
-  vm_type: default
-  jobs:
-  - name: smoke-tests
-    release: zookeeper
-```
-
-For example, at the time of writing, the community method for deploying Cloud Foundry assumes that your cloud-config contains `vm_types` that are named:
-
-* `minimal`
-* `small`
-* `small-highmem`
-* `sharedcpu`
-
-This comes from https://github.com/cloudfoundry/cf-deployment/blob/master/cf-deployment.yml
